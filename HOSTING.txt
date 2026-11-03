@@ -1,0 +1,40 @@
+# Hostmaster hosting - TEKSHIRUV RO'YXATI
+
+## 1. cPanel sozlamalari (Setup Python App)
+
+- Python version: 3.12
+- Application root: aloqa_bot
+- Application URL: bot.attezkor.uz
+- Application startup file: passenger_wsgi.py
+- Application Entry point: application
+
+## 2. Fayllar (/home/attezkor/aloqa_bot/)
+
+- bot.py
+- passenger_wsgi.py
+- requirements.txt
+- .env (ixtiyoriy, Environment Variables muhimroq)
+
+## 3. Environment Variables (cPanel da)
+
+BOT_TOKEN=...
+ADMIN_ID=1658827494
+WEBHOOK_URL=https://bot.attezkor.uz/webhook
+WEBHOOK_PATH=/webhook
+
+## 4. Terminal
+
+source /home/attezkor/virtualenv/aloqa_bot/3.12/bin/activate
+cd /home/attezkor/aloqa_bot
+pip install python-telegram-bot python-dotenv flask
+
+## 5. RESTART
+
+## 6. Tekshirish
+
+https://bot.attezkor.uz         -> Aloqa bot ishlayapti
+https://bot.attezkor.uz/status  -> bot_token: True, webhook_ready: True
+
+## 7. Telegram
+
+Boshqa akkauntdan /start bosing
